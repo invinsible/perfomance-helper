@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Outlet, useParams } from 'react-router-dom';
+
+import PageTitle from './components/UI/PageTitle';
+
+import { getOneTrick } from './mockup/tricks';
+
+import classes from './App.module.css';
 
 function App() {
+  const params = useParams();
+  const isTrickPage = params.trickId;
+  let title = 'Perfomance Helper';
+  if (isTrickPage) {
+    const currentTrick = getOneTrick(params.trickId);
+    title = currentTrick.title;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.container}>
+      <PageTitle>{title}</PageTitle>
+      <Outlet />
     </div>
   );
 }

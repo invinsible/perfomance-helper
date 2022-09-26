@@ -1,0 +1,28 @@
+.preparation-item {
+  margin-bottom: 10px;
+}
+
+.preparation-item:before {
+  content: '';
+  display: inline-block;
+  margin-right: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.order:before {
+  background-color: red;
+}
+
+.blank-face:before {
+  background-color: green;
+}
+
+.dublicate:before {
+  background-color: yellow;
+}
+
+span {
+  font-weight: 700;
+}

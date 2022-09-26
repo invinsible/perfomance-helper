@@ -1,0 +1,22 @@
+.title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #535353;
+}
+
+.card {
+  padding: 20px 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.card--flow {
+  margin-bottom: 0;
+  background-color: #A2D0A1;
+}
+
+.card--preparation {
+  background-color: #DFC1C1;
+}
